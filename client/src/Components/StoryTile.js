@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class StoryTile extends Component {
   selectStoryTile(_id) {
     console.log('selected', _id);
-    window.location.hash = "#/my/target/url";
   }
 
   render() {
