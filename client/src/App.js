@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      stories: []
+      stories: [{}, {}, {}, {}, {}, {}, {}, {}, {}]
     };
   }
   componentDidMount() {
@@ -26,12 +26,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="Stories-title"> Stories </div>
-        <div className="Story-container">
-          <Stories stories={this.state.stories} />
+        <div className="App">
+          <h1 className="Stories-title"> Turntable </h1>
+          <div className="Story-container">
+            <Stories stories={this.state.stories} />
+          </div>
         </div>
-      </div>
     );
   }
 }

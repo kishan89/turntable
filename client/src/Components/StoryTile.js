@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 
 class StoryTile extends Component {
+  selectStoryTile(_id) {
+    console.log('selected', _id);
+    window.location.hash = "#/my/target/url";
+  }
+
   render() {
     let story = this.props.story
     return (
-      <div className="Story-tile">
-        {story.title} - {story.author}
+      <div className="Story-tile-container">
+        <div className="Story-tile" onClick={this.selectStoryTile.bind(this, story._id)}>
+          <strong> {story.title} </strong>
+          <br/>
+          <i> {story.author} </i>
+        </div>
       </div>
     );
   }

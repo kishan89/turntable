@@ -1,3 +1,9 @@
+body {
+  background-color: #404040;
+  background-image: url(./topography.svg);
+  font-family: "Avenir"
+}
+
 .Story-container {
   display: flex;
   justify-content: center;
@@ -6,19 +12,37 @@
 .Story-grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #2196F3;
-  padding: 10px;
-  grid-gap: 15px;
+  padding: 8px;
+  width: 85vw;
+}
+
+.Story-tile-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  border-bottom: 8px solid #008e99;
 }
 
 .Story-tile {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  max-width: 100px;
+  margin: 8px 8px 0px 8px;
+  /* background-color: #ddfffa; */
+  background-color: #000;
+  cursor: pointer;
+  border-radius: 4px 4px 0px 0px;
+  opacity: 0.7;
   padding: 20px;
   font-size: 18px;
-  border-bottom: 10px solid black;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.Story-tile:hover {
+  opacity: 1;
 }
 
 .Stories-title {
+  color: #fff;
+  margin-top: 16px;
   text-align: center;
 }
