@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom';
 
 class StoryTile extends Component {
   selectStoryTile(_id) {
     console.log('selected', _id);
+    this.props.history.push('/story/' + _id);
   }
 
   render() {
@@ -19,4 +21,4 @@ class StoryTile extends Component {
   }
 }
 
-export default StoryTile;
+export default withRouter(StoryTile);
